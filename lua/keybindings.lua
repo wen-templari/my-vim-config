@@ -3,3 +3,4 @@ local opt = {noremap = true, silent = true }
 
 -- nvimTree
 map('n', '<A-m>', ':NvimTreeToggle<CR>', opt)
+

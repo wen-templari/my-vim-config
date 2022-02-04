@@ -44,12 +44,15 @@ imap "" ""<ESC>i
 imap '' ''<ESC>i
 " end
 
-call plug#begin()
-Plug 'tpope/vim-surround'
-call plug#end()
+lua << EOF
+require('keybindings')
 
-lua require('keybindings')
-
-lua require('plugins')
-lua require('plugin-config/nvim-treesitter')
-lua require('plugin-config/nvim-tree')
+require('plugins')
+require('plugin-config/nvim-treesitter')
+require('plugin-config/nvim-tree')
+require('lsp/setup')
+require('lsp/nvim-cmp')
+require'lspconfig'.clangd.setup{
+  autostart = true,
+  }
+EOF
