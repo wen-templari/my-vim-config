@@ -45,6 +45,7 @@ imap '' ''<ESC>i
 " end
 
 lua << EOF
+vim.o.timeoutlen = 150
 require('keybindings')
 
 require('plugins')
