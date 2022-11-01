@@ -1,5 +1,5 @@
 set nu
-  set ruler
+set ruler
 syntax on
 
 set cursorline
@@ -15,6 +15,8 @@ set smartindent
 
 set termguicolors
 set signcolumn=yes
+
+let mapleader = "\<Space>"
 
 nmap <tab> V>
 nmap <s-tab> V<
@@ -47,11 +49,9 @@ imap "" ""<ESC>i
 imap '' ''<ESC>i
 
 " end
-
 lua << EOF
 
 require('plugins')
-
 require('plugin-config/nvim-tree')
 
 require('Comment').setup()
@@ -68,3 +68,9 @@ require('onedark').load()
 require('bufferline').setup()
 
 EOF
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
