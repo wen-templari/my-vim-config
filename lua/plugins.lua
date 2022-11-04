@@ -10,13 +10,18 @@ return require('packer').startup(function()
     end
   }
 
-  use { 'akinsho/bufferline.nvim', tag = 'v3.*', requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim',
+    tag = 'v3.*',
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
 
   use { 'nvim-tree/nvim-tree.lua', requires = {
     'nvim-tree/nvim-web-devicons', -- optional, for file icons
   } }
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  use { 'github/copilot.vim ' }
 
   use { 'navarasu/onedark.nvim' }
 

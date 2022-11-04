@@ -51,13 +51,14 @@ imap '' ''<ESC>i
 " end
 lua << EOF
 
+
 require('plugins')
 require('plugin-config/nvim-tree')
 
-require('Comment').setup()
-
 require('plugin-config/lsp')
 require('plugin-config/nvim-cmp')
+
+require('bufferline').setup()
 
 require('onedark').setup{
   stye = 'darker',
@@ -65,12 +66,15 @@ require('onedark').setup{
 }
 require('onedark').load()
 
-require('bufferline').setup()
-
 EOF
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>pp <cmd>Telescope find_files<cr>
+" nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+" nnoremap <leader>fb <cmd>Telescope buffers<cr>
+" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+nnoremap <leader>ff <cmd>lua =vim.lsp.buf.formatting_sync()<cr>
+
+nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 

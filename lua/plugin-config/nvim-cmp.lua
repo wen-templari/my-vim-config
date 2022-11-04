@@ -37,6 +37,7 @@ local cmp = require'cmp'
       { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
     }, {
       { name = 'buffer' },
+      r
     })
   })
 
@@ -54,7 +55,7 @@ local cmp = require'cmp'
     sources = cmp.config.sources({
       { name = 'path' }
     }, {
-      { name = 'cmdline' }
+      { name = 'cmdline', keyword_pattern=[=[[^[:blank:]\!]*]=], keyword_length=3 }
     })
   })
 

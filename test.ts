@@ -1,8 +1,7 @@
 const a = "hello there"
 
-
-const b = (s:string) =>{
-  console.log(s) 
+const b = (s: string) => {
+  console.log(s)
 }
 
 
