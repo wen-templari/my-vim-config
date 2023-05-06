@@ -3,7 +3,7 @@ set ruler
 syntax on
 
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+highlight CursorLine term=bold cterm=bold guibg=White
 
 set mouse=a
 set tabstop=2
@@ -13,6 +13,7 @@ set smarttab
 set autoindent
 set smartindent
 
+colorscheme kanagawa
 set termguicolors
 set signcolumn=yes
 
@@ -39,6 +40,7 @@ imap {; {<CR><CR>};<ESC>jddkkddkA
 imap { {}<ESC>i<CR><CR><ESC>kA<TAB><RIGHT><RIGHT>
 imap {} {}<ESC>a
 
+
 imap < <><ESC>i
 imap <<SPACE> <<ESC><RIGHT>r<SPACE>a
 imap << <<<ESC><RIGHT>r<SPACE>a<BACKSPACE>
@@ -62,17 +64,16 @@ require('plugin-config/nvim-cmp')
 
 require('bufferline').setup()
 
-require('onedark').setup{
-  stye = 'darker',
-  transparent = true 
-}
-require('onedark').load()
+-- require('onedark').setup{
+--   stye = 'darker',
+--   transparent = true 
+-- }
+-- require('onedark').load()
 
 EOF
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nnoremap <leader>gf <cmd>lua =vim.lsp.buf.formatting_sync()<cr>
