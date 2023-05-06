@@ -5,9 +5,9 @@ require('plugin-config/lsp')
 require('plugin-config/nvim-cmp')
 
 require('bufferline').setup()
-
-require('onedark').setup {
-  stye = 'darker',
-  transparent = true
-}
-require('onedark').load()
+--
+-- require('onedark').setup {
+--   stye = 'darker',
+--   transparent = true
+-- }
+-- require('onedark').load()

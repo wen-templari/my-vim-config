@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup{
-  ensure_installed = { "sumneko_lua", "gopls" },
+  ensure_installed = { "lua_language_server", "gopls" },
 }
 
 require('mason-lspconfig').setup()
@@ -25,7 +25,7 @@ require("mason-lspconfig").setup_handlers {
 
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })

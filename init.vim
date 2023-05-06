@@ -5,6 +5,8 @@ syntax on
 set cursorline
 highlight CursorLine term=bold cterm=bold guibg=White
 
+set encoding=UTF-8
+
 set mouse=a
 set tabstop=2
 set shiftwidth=2
