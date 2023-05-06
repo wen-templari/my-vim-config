@@ -46,14 +46,3 @@ imap <> <><ESC>a
 
 imap "" ""<ESC>i
 imap '' ''<ESC>i
-
-lua << EOF
-require('main')
-EOF
-
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>gf <cmd>lua =vim.lsp.buf.formatting_sync()<cr>
-nnoremap <leader>tt <cmd>NvimTreeToggle<cr>
-
