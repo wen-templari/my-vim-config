@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup{
-  ensure_installed = { "lua_language_server", "gopls" },
+  ensure_installed = { "gopls" },
 }
 
 require('mason-lspconfig').setup()

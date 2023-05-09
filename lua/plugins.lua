@@ -3,6 +3,7 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
 
+  use { 'f-person/git-blame.nvim' }
   use { 'tpope/vim-surround' }
   use{ 'numToStr/Comment.nvim',
     config=function()
@@ -21,7 +22,7 @@ return require('packer').startup(function()
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  use { 'github/copilot.vim ' }
+  use { 'github/copilot.vim' }
 
   use { 'navarasu/onedark.nvim' }
 
