@@ -34,6 +34,7 @@ EOF
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>gf <cmd>lua =vim.lsp.buf.format()<cr>
 nnoremap <leader>tt <cmd>NvimTreeToggle<cr>
+nnoremap <leader>gf <cmd>lua =vim.lsp.buf.format()<cr>
+nnoremap <leader>h <cmd>lua =vim.lsp.buf.hover()<cr>
 
