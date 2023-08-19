@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { 'f-person/git-blame.nvim' },
-  { 'jiangmiao/auto-pairs'},
+  { 'jiangmiao/auto-pairs' },
   { 'tpope/vim-surround' },
   {
     'numToStr/Comment.nvim',
@@ -21,7 +21,10 @@ require("lazy").setup({
       require('Comment').setup()
     end
   },
-  { 'nvim-tree/nvim-web-devicons',      lazy = true },
+  {
+    'nvim-tree/nvim-web-devicons',
+    lazy = true
+  },
   {
     'nvim-lualine/lualine.nvim',
     config = function()
@@ -35,15 +38,6 @@ require("lazy").setup({
     },
     config = function()
       require('nvim-tree').setup()
-    end
-  },
-  {
-    'akinsho/bufferline.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    config = function()
-      require('bufferline').setup()
     end
   },
   {
@@ -72,21 +66,30 @@ require("lazy").setup({
   },
   { 'github/copilot.vim' },
   {
-    "rebelot/kanagawa.nvim",
-    lazy = true,
-    priroity = 1000
+    'wen-templari/nvim-quietlight',
+    config = function()
+      require('nvim-quietlight').setup({
+        syntax = {
+          booleans = { italic = false },
+        }
+      })
+    end
   },
   {
-    'navarasu/onedark.nvim',
+    "pocco81/auto-save.nvim",
     config = function()
-      require('onedark').setup({
-        stye = 'darker',
-        transparent = true
-      })
-      require('onedark').load()
+      require("auto-save").setup()
     end
+  },
+  {
+    "airblade/vim-gitgutter"
   }
 })
 
 require('plugin-config/lsp')
 require('plugin-config/nvim-cmp')
+require('plugin-config/nvim-treesitter')
+require('shortcuts')
+
+vim.cmd('colorscheme quietlight')
+vim.cmd("highlight clear ColorColumn")
