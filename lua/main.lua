@@ -12,6 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- load theme first so that other plugin config can overwrite it
+  require('plugins/theme'),
+  require('plugins/editor'),
+  require('plugins/project'),
+  require('plugins/ui'),
+  require('plugins/lsp'),
+  require('plugins/nvim-treesitter'),
+  require('plugins/git'),
+
   -- { 'Bekaboo/dropbar.nvim' },
   {
     'nvim-telescope/telescope.nvim',
@@ -20,13 +29,6 @@ require("lazy").setup({
     }
   },
   { 'github/copilot.vim' },
-  require('plugins/editor'),
-  require('plugins/project'),
-  require('plugins/ui'),
-  require('plugins/lsp'),
-  require('plugins/nvim-treesitter'),
-  require('plugins/git'),
-  require('plugins/theme'),
 })
 
 require('shortcuts')
