@@ -66,7 +66,7 @@ return {
               semanticTokens = true
             }
           }
-        end
+        end,
 
       }
 

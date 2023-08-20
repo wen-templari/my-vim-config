@@ -8,5 +8,6 @@
       })
       vim.cmd('colorscheme quietlight')
       vim.cmd("highlight clear ColorColumn")
+      vim.cmd("hi IlluminatedWordText guibg=#cecece gui=none")
     end
   }
