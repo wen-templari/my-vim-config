@@ -12,7 +12,7 @@ return {
           'regex',
         },
       })
-      -- vim.cmd("hi IlluminatedWordText guibg=#393E4D gui=none")
+      vim.cmd("hi IlluminatedWordText guibg=#cecece")
     end
   },
   {
