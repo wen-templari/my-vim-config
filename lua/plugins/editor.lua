@@ -1,4 +1,7 @@
 return {
+
+  { 'tpope/vim-repeat' },
+  { 'dkarter/bullets.vim' },
   {
     'windwp/nvim-autopairs',
     event = { "InsertEnter" },

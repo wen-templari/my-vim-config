@@ -17,6 +17,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-calc",
+      "f3fora/cmp-spell"
     },
     config = function()
       local lsp = require('lsp-zero').preset({})
@@ -69,7 +70,8 @@ return {
         end,
 
       }
-
+      vim.opt.spell = true
+      vim.opt.spelllang = { 'en_us' }
       local cmp = require('cmp')
       -- local lspkind = require('lspkind')
       cmp.setup({
@@ -99,6 +101,15 @@ return {
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp', max_item_count = 10 },
+          {
+            name = 'spell',
+            option = {
+              keep_all_entries = false,
+              enable_in_context = function()
+                return true
+              end,
+            },
+          },
           { name = 'buffer' },
         }, {
           { name = "path" },
