@@ -20,6 +20,8 @@ set termguicolors
 set signcolumn=yes
 set background=light
 
+set undofile
+
 let mapleader = " "
 
 

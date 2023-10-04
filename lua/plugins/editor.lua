@@ -55,6 +55,14 @@ return {
     event = { "UIEnter" },
     config = function()
       require("hlchunk").setup({
+        indent = {
+          chars = {
+            "│",
+          },
+          style = {
+            "#d4d4d4",
+          },
+        },
         blank = {
           chars = {
             " ",
