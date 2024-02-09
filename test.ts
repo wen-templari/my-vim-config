@@ -4,4 +4,3 @@ const b = (s: string) => {
   console.log(s)
 }
 
-b(a)

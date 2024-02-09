@@ -31,4 +31,5 @@ require("lazy").setup({
   { 'github/copilot.vim' },
 })
 
+require('plugins/theme_persist')
 require('shortcuts')

@@ -55,12 +55,18 @@ return {
     event = { "UIEnter" },
     config = function()
       require("hlchunk").setup({
+        chunk = {
+          chars = {
+            horizontal_line = "",
+            vertical_line = "│",
+            left_top = "│",
+            left_bottom = "│",
+            right_arrow = "",
+          },
+        },
         indent = {
           chars = {
             "│",
-          },
-          style = {
-            "#d4d4d4",
           },
         },
         blank = {
